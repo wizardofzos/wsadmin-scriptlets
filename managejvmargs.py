@@ -2,7 +2,9 @@
 # addjvmarg.py : will set a JVM generic argument to one or all servers
 #
 
-
+# ToDo : - validate JVM arguments
+#        - prettify the List output
+#        - prettify the "interface"
 def main():
   serverList = selserv("Select Server")
   print "Do you want to Delete or Add an argument?"
