@@ -185,12 +185,14 @@ def updateJVMArguments(arg, jvmParms):
 
 
 def removeJVMArgument(toRemove, currentArgs):
-  origList = currentArgs.split(" ")
   result = ""
-  for arg in origList:
-    if arg <> toRemove:
-      result = result + arg + " "
-  result = result.strip()
+  if currentArgs != None:
+    origList = currentArgs.split(" ")
+    for arg in origList:
+      if arg <> toRemove:
+        result = result + arg + " "
+    result = result.strip() 
+
   return result
 
 
