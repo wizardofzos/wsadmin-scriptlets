@@ -98,6 +98,7 @@ def selserv(subtitle):
 
   # Read all servers
   allservers = AdminTask.listServers("-serverType APPLICATION_SERVER").split("\n")
+  allservers.sort()
 
   # Init our 'selector'
   selopt = 0
