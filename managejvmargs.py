@@ -5,6 +5,7 @@
 # ToDo : - validate JVM arguments
 #        - prettify the List output
 #        - prettify the "interface"
+#        - Be able to select not all but multiple servers to manage
 def main():
   serverList = selserv("Select Server")
   print "Do you want to Delete or Add an argument?"
@@ -61,7 +62,7 @@ def main():
                 log("ADD",jvmarg,AdminConfig.showAttribute(sid, "shortName"),jvmType)
             if action == "D":
               newArgs = removeJVMArgument(jvmarg, origJVM)
-              if newArgs != origJVM:
+              if newArgs != origJVM and origJVM != "":
                 log("DEL",jvmarg,AdminConfig.showAttribute(sid, "shortName"),jvmType)
             AdminConfig.modify(jvm, [["genericJvmArguments", newArgs]])
 
