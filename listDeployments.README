@@ -1,0 +1,39 @@
+
+# the Wizards codex
+tpdb  = {}   # the type database
+cidb  = {}   # the config item database
+
+ciid  = 0    # is int(10) enough for all ci's?
+
+types = AdminConfig.list(types).split("\n")
+for type in types:
+  list = AdminConfig.list(type)
+  tpdb[type] = list
+  for ci in list.split("\n"):
+    name + attribs
+  
+  # This needs split into all seperate instances of each type
+
+for ci in types:
+  name = getName(ci)
+  attr = showAll(ci).split("\n")
+  cidb[ciid] = attr
+  
+
+# list all cidbs and select types to manage/control
+
+def getName(ci):
+  pos = ci.find("(")
+  return ci[:pos]
+
+def getAttrs(ci):
+  # This one is tricky :)
+
+  
+
+
+
+  
+
+
+
